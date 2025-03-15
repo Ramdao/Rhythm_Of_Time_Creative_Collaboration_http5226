@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Rhythm_Of_Time.props" />
+</Project>
