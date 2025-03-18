@@ -224,6 +224,54 @@ namespace Rhythm_Of_Time.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Rhythm_Of_Time.Models.Timeline", b =>
+                {
+                    b.Property<int>("timeline_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("timeline_Id"));
+
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("timeline_name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("timeline_Id");
+
+                    b.ToTable("timelines");
+                });
+
+            modelBuilder.Entity("Rhythm_Of_Time.Models.UserTimeline", b =>
+                {
+                    b.Property<int>("usertime_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("usertime_Id"));
+
+                    b.Property<int>("timeline_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("user_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("usertime_Id");
+
+                    b.HasIndex("timeline_Id");
+
+                    b.HasIndex("user_id");
+
+                    b.ToTable("UsersTimeline");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -273,6 +321,25 @@ namespace Rhythm_Of_Time.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Rhythm_Of_Time.Models.UserTimeline", b =>
+                {
+                    b.HasOne("Rhythm_Of_Time.Models.Timeline", "Timeline")
+                        .WithMany()
+                        .HasForeignKey("timeline_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Timeline");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

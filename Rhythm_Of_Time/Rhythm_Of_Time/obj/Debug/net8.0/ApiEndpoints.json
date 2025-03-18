@@ -1,5 +1,182 @@
 [
   {
+    "ContainingType": "Rhythm_Of_Time.Controllers.TimelineController",
+    "Method": "AddTimeline",
+    "RelativePath": "api/Timeline/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "timelineDto",
+        "Type": "Rhythm_Of_Time.Models.TimelineDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rhythm_Of_Time.Models.Timeline",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.TimelineController",
+    "Method": "DeleteTimeline",
+    "RelativePath": "api/Timeline/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.TimelineController",
+    "Method": "FindTimeline",
+    "RelativePath": "api/Timeline/Find/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rhythm_Of_Time.Models.TimelineDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.TimelineController",
+    "Method": "GetTimelines",
+    "RelativePath": "api/Timeline/ListTimeline",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Rhythm_Of_Time.Models.TimelineDto, Rhythm_Of_Time, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.TimelineController",
+    "Method": "UpdateTimeline",
+    "RelativePath": "api/Timeline/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "timelineDto",
+        "Type": "Rhythm_Of_Time.Models.TimelineDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Rhythm_Of_Time.Models.UserDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedUser",
+        "Type": "Rhythm_Of_Time.Models.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserController",
+    "Method": "FindUser",
+    "RelativePath": "api/User/Find/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rhythm_Of_Time.Models.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Rhythm_Of_Time.Controllers.UserController",
     "Method": "ListUsers",
     "RelativePath": "api/User/List",
@@ -18,5 +195,120 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserController",
+    "Method": "PutUser",
+    "RelativePath": "api/User/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "userDto",
+        "Type": "Rhythm_Of_Time.Models.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserTimelineController",
+    "Method": "GetTimelinesForUser",
+    "RelativePath": "api/UserTimeline/GetTimelinesForUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Rhythm_Of_Time.Models.UserTimelineDto, Rhythm_Of_Time, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserTimelineController",
+    "Method": "GetUsersForTimeline",
+    "RelativePath": "api/UserTimeline/GetUsersForTimeline/{timelineId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "timelineId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Rhythm_Of_Time.Models.UserTimelineDto, Rhythm_Of_Time, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserTimelineController",
+    "Method": "LinkUserToTimeline",
+    "RelativePath": "api/UserTimeline/LinkUserToTimeline",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "timelineId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.UserTimelineController",
+    "Method": "UnlinkUserFromTimeline",
+    "RelativePath": "api/UserTimeline/UnlinkUserFromTimeline",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "timelineId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

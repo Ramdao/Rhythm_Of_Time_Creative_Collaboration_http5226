@@ -12,11 +12,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Rhythm_Of_Time-ea966bb4-d8e4-407e-8ab5-47d2cce82847")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Rhythm_Of_Time-6302919d-b688-43ed-8d65-0b81421f52df")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64d544457ea93cc6438c5d80e8a90a118542d5ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d55dda6aa0c9922e9fc7d4b6fe22c3109cc91d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

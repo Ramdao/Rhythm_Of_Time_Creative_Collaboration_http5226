@@ -23,7 +23,8 @@ builder.Services.AddControllersWithViews();
 
 // Associate service interfaces with their implementations
 builder.Services.AddScoped<IUserServices, UserService>();
-
+builder.Services.AddScoped<ITimelineService, TimelineService>();
+builder.Services.AddScoped<IUserTimelineService, UserTimeline>();
 
 builder.Services.AddHttpContextAccessor();
 
