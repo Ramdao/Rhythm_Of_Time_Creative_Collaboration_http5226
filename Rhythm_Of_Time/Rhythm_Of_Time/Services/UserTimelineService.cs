@@ -11,12 +11,12 @@ using Rhythm_Of_Time.Data.Migrations;
 
 namespace Rhythm_Of_Time.Services
 {
-    public class UserTimeline : IUserTimelineService
+    public class UserTimelineService : IUserTimelineService
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public UserTimeline(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public UserTimelineService(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _userManager = userManager;

@@ -24,7 +24,11 @@ builder.Services.AddControllersWithViews();
 // Associate service interfaces with their implementations
 builder.Services.AddScoped<IUserServices, UserService>();
 builder.Services.AddScoped<ITimelineService, TimelineService>();
-builder.Services.AddScoped<IUserTimelineService, UserTimeline>();
+builder.Services.AddScoped<IUserTimelineService, UserTimelineService>();
+builder.Services.AddScoped<ISongService, SongService>();
+builder.Services.AddScoped<IArtistService, ArtistService>();
+builder.Services.AddScoped<IAwardService, AwardService>();
+builder.Services.AddScoped<IEntryService, EntryService>();
 
 builder.Services.AddHttpContextAccessor();
 

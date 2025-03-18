@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rhythm_Of_Time.Data;
 
@@ -11,9 +12,11 @@ using Rhythm_Of_Time.Data;
 namespace Rhythm_Of_Time.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250318052307_songs")]
+    partial class songs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -224,73 +227,6 @@ namespace Rhythm_Of_Time.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Rhythm_Of_Time.Models.Artist", b =>
-                {
-                    b.Property<int>("ArtistId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ArtistId"));
-
-                    b.Property<string>("name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nationality")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ArtistId");
-
-                    b.ToTable("artist");
-                });
-
-            modelBuilder.Entity("Rhythm_Of_Time.Models.Award", b =>
-                {
-                    b.Property<int>("AwardId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AwardId"));
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AwardId");
-
-                    b.ToTable("award");
-                });
-
-            modelBuilder.Entity("Rhythm_Of_Time.Models.Entry", b =>
-                {
-                    b.Property<int>("entry_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("entry_Id"));
-
-                    b.Property<int>("SongId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("decription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("timeline_Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("entry_Id");
-
-                    b.HasIndex("SongId");
-
-                    b.HasIndex("timeline_Id");
-
-                    b.ToTable("entry");
-                });
-
             modelBuilder.Entity("Rhythm_Of_Time.Models.Song", b =>
                 {
                     b.Property<int>("SongId")
@@ -411,25 +347,6 @@ namespace Rhythm_Of_Time.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Rhythm_Of_Time.Models.Entry", b =>
-                {
-                    b.HasOne("Rhythm_Of_Time.Models.Song", "Song")
-                        .WithMany()
-                        .HasForeignKey("SongId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Rhythm_Of_Time.Models.Timeline", "Timeline")
-                        .WithMany()
-                        .HasForeignKey("timeline_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Song");
-
-                    b.Navigation("Timeline");
                 });
 
             modelBuilder.Entity("Rhythm_Of_Time.Models.UserTimeline", b =>
