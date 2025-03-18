@@ -79,6 +79,75 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Rhythm_Of_Time.Controllers.ArtistSongController",
+    "Method": "GetArtistsForSong",
+    "RelativePath": "api/ArtistSong/GetArtistsForSong/{songId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "songId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.ArtistSongController",
+    "Method": "GetSongsForArtist",
+    "RelativePath": "api/ArtistSong/GetSongsForArtist/{artistId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "artistId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.ArtistSongController",
+    "Method": "LinkArtistToSong",
+    "RelativePath": "api/ArtistSong/LinkArtistToSong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "artistSongDto",
+        "Type": "Rhythm_Of_Time.Models.ArtistSongDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.ArtistSongController",
+    "Method": "UnlinkArtistFromSong",
+    "RelativePath": "api/ArtistSong/UnlinkArtistFromSong/{songId}/{artistId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "songId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "artistId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Rhythm_Of_Time.Controllers.AwardController",
     "Method": "CreateAward",
     "RelativePath": "api/Award/add",
@@ -152,6 +221,75 @@
       {
         "Name": "awardDto",
         "Type": "Rhythm_Of_Time.Models.AwardDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.AwardSongController",
+    "Method": "GetAwardsForSong",
+    "RelativePath": "api/AwardSong/GetAwardsForSong/{songId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "songId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.AwardSongController",
+    "Method": "GetSongsForAward",
+    "RelativePath": "api/AwardSong/GetSongsForAward/{awardId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "awardId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.AwardSongController",
+    "Method": "LinkAwardToSong",
+    "RelativePath": "api/AwardSong/LinkAwardToSong",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "awardSongDto",
+        "Type": "Rhythm_Of_Time.Models.AwardSongDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rhythm_Of_Time.Controllers.AwardSongController",
+    "Method": "UnlinkAwardFromSong",
+    "RelativePath": "api/AwardSong/UnlinkAwardFromSong/{songId}/{awardId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "songId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "awardId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

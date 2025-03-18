@@ -29,6 +29,8 @@ builder.Services.AddScoped<ISongService, SongService>();
 builder.Services.AddScoped<IArtistService, ArtistService>();
 builder.Services.AddScoped<IAwardService, AwardService>();
 builder.Services.AddScoped<IEntryService, EntryService>();
+builder.Services.AddScoped<IArtistSongService, ArtistSongService>();
+builder.Services.AddScoped<IAwardSongService, AwardSongService>();
 
 builder.Services.AddHttpContextAccessor();
 

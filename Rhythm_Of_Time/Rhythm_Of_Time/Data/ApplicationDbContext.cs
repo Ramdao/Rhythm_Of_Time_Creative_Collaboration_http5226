@@ -16,6 +16,10 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Award> award { get; set; }
 
     public DbSet<Entry> entry { get; set; }
+
+    public DbSet<ArtistSong> artistSongs { get; set; }
+
+    public DbSet<AwardSong> awardSongs { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {

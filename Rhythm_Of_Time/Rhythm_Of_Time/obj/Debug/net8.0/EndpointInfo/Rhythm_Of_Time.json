@@ -136,6 +136,115 @@
         }
       }
     },
+    "/api/ArtistSong/LinkArtistToSong": {
+      "post": {
+        "tags": [
+          "ArtistSong"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistSongDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistSongDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistSongDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ArtistSong/UnlinkArtistFromSong/{songId}/{artistId}": {
+      "delete": {
+        "tags": [
+          "ArtistSong"
+        ],
+        "parameters": [
+          {
+            "name": "songId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "artistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ArtistSong/GetArtistsForSong/{songId}": {
+      "get": {
+        "tags": [
+          "ArtistSong"
+        ],
+        "parameters": [
+          {
+            "name": "songId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ArtistSong/GetSongsForArtist/{artistId}": {
+      "get": {
+        "tags": [
+          "ArtistSong"
+        ],
+        "parameters": [
+          {
+            "name": "artistId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Award/List": {
       "post": {
         "tags": [
@@ -252,6 +361,115 @@
         "parameters": [
           {
             "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AwardSong/LinkAwardToSong": {
+      "post": {
+        "tags": [
+          "AwardSong"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AwardSongDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AwardSongDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AwardSongDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AwardSong/UnlinkAwardFromSong/{songId}/{awardId}": {
+      "delete": {
+        "tags": [
+          "AwardSong"
+        ],
+        "parameters": [
+          {
+            "name": "songId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "awardId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AwardSong/GetAwardsForSong/{songId}": {
+      "get": {
+        "tags": [
+          "AwardSong"
+        ],
+        "parameters": [
+          {
+            "name": "songId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AwardSong/GetSongsForAward/{awardId}": {
+      "get": {
+        "tags": [
+          "AwardSong"
+        ],
+        "parameters": [
+          {
+            "name": "awardId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1113,6 +1331,28 @@
         },
         "additionalProperties": false
       },
+      "ArtistSongDto": {
+        "type": "object",
+        "properties": {
+          "artistSong_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "songId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "artistId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AwardDto": {
         "type": "object",
         "properties": {
@@ -1125,6 +1365,28 @@
             "nullable": true
           },
           "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AwardSongDto": {
+        "type": "object",
+        "properties": {
+          "awardSong_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "songId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "awardId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
             "type": "string",
             "nullable": true
           }
