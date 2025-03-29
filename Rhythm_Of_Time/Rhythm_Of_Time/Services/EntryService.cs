@@ -174,5 +174,24 @@ namespace Rhythm_Of_Time.Services
 
             return serviceResponse;
         }
+
+        public async Task<EntryDto?> FindEntry(int id)
+        {
+            var entry = await _context.entry.FirstOrDefaultAsync(s => s.entry_Id== id);
+
+            if (entry == null)
+            {
+                return null;
+            }
+
+            return new EntryDto()
+            {
+                entry_Id = entry.entry_Id,
+                timeline_Id = entry.timeline_Id,
+                SongId = entry.SongId,
+                decription = entry.decription
+
+            };
+        }
     }
 }

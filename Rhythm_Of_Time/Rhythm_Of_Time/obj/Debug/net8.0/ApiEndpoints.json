@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "artist",
-        "Type": "Rhythm_Of_Time.Models.Artist",
+        "Type": "Rhythm_Of_Time.Models.ArtistDto",
         "IsRequired": true
       }
     ],
@@ -72,7 +72,7 @@
       },
       {
         "Name": "artist",
-        "Type": "Rhythm_Of_Time.Models.Artist",
+        "Type": "Rhythm_Of_Time.Models.ArtistDto",
         "IsRequired": true
       }
     ],
@@ -289,6 +289,22 @@
       },
       {
         "Name": "awardId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EntryController",
+    "Method": "GetEntry",
+    "RelativePath": "api/Entry/find{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }

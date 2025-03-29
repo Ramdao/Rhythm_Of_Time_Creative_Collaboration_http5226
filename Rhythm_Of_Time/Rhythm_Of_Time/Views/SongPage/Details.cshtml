@@ -1,0 +1,66 @@
+﻿@model Rhythm_Of_Time.Models.SongDetails
+
+@{
+    ViewData["Title"] = "Song Details";
+}
+
+<h1>Song Details</h1>
+<a asp-action="List">Back to List</a>
+<div>
+    <h4>Song Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Title</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Song.Title)</dd>
+
+        <dt class="col-sm-2">Album</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Song.Album)</dd>
+
+        <dt class="col-sm-2">Release Year</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Song.ReleaseYear)</dd>
+    </dl>
+</div>
+
+<!-- Display associated artists -->
+<div>
+    <h4>Artists</h4>
+    <hr />
+    @if (Model.Artists != null && Model.Artists.Any())
+    {
+        <ul>
+            @foreach (var artist in Model.Artists)
+            {
+                <li>
+                    <strong>@artist.name</strong> - @artist.nationality
+                    (<a asp-controller="ArtistPage" asp-action="Details" asp-route-id="@artist.ArtistId">View Details</a>)
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No associated artists.</p>
+    }
+</div>
+
+<!-- Display associated awards -->
+<div>
+    <h4>Awards</h4>
+    <hr />
+    @if (Model.Awards != null && Model.Awards.Any())
+    {
+        <ul>
+            @foreach (var award in Model.Awards)
+            {
+                <li>
+                    <strong>@award.name</strong> - @award.description
+                    (<a asp-controller="AwardPage" asp-action="Details" asp-route-id="@award.AwardId">View Details</a>)
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No awards received.</p>
+    }
+</div>

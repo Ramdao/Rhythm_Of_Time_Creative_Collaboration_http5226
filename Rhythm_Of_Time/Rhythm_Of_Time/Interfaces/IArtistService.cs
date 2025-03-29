@@ -7,16 +7,16 @@ namespace Rhythm_Of_Time.Interfaces
     public interface IArtistService
     {
         // List all artists
-        Task<IEnumerable<Artist>> List();
+        Task<IEnumerable<ArtistDto>> List();
 
         // Find an artist by their ID
-        Task<Artist?> FindArtist(int id);
+        Task<ArtistDto?> FindArtist(int id);
 
         // Update an artist's information
-        Task<ServiceResponse> UpdateArtist(int id, Artist artist);
+        Task<ServiceResponse> UpdateArtist(int id, ArtistDto artist);
 
         // Add a new artist
-        Task<ServiceResponse> AddArtist(Artist artist);
+        Task<ServiceResponse> AddArtist(ArtistDto artist);
 
         // Delete an artist by their ID
         Task<ServiceResponse> DeleteArtist(int id);

@@ -47,7 +47,8 @@ namespace Rhythm_Of_Time.Services
                               timeline_Id = t.timeline_Id,
                               user_id = ut.user_id,
                               timeline_name = t.timeline_name,
-                              user_email = user.Email  // Add user email to the DTO
+                              user_email = user.Email,
+                              user_name = user.UserName
                           })
                     .ToListAsync();
             }

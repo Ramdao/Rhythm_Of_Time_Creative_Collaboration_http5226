@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Rhythm_Of_Time.Interfaces;
 using Rhythm_Of_Time.Models;
+using Rhythm_Of_Time.Services;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -65,5 +66,17 @@ public class EntryController : ControllerBase
             return NoContent();
         }
         return BadRequest(response);
+    }
+
+    // GET: api/award/5
+    [HttpGet("find{id}")]
+    public async Task<IActionResult> GetEntry(int id)
+    {
+        var award = await _entryService.FindEntry(id);
+        if (award == null)
+        {
+            return NotFound(new { message = "Award not found" });
+        }
+        return Ok(award);
     }
 }

@@ -20,5 +20,7 @@ namespace Rhythm_Of_Time.Interfaces
 
         // Update an existing entry (change description or other details)
         Task<ServiceResponse> UpdateEntry(int entryId, EntryDto updatedEntryDto);
+
+        Task<EntryDto?> FindEntry(int id);
     }
 }

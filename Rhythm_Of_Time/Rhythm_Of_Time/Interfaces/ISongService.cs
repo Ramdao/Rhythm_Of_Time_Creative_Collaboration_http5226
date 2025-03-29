@@ -18,5 +18,7 @@ namespace Rhythm_Of_Time.Interfaces
 
         // Delete a song by its ID
         Task<ServiceResponse> DeleteSong(int id);
+
+        Task<IEnumerable<SongDTO>> GetSongsForEntry(int entryId);
     }
 }

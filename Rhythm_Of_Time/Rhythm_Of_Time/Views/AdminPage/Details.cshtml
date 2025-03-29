@@ -1,0 +1,46 @@
+﻿@model Rhythm_Of_Time.Models.UserDetails
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<h1>User Details</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+ 
+    <dl>
+        <dt>Username:</dt>
+        <dd>@Model.User.UserName</dd>
+
+        <dt>Email:</dt>
+        <dd>@Model.User.UserEmail</dd>
+
+        <dt>Timelines:</dt>
+        <dd>
+            @if (Model.UserTimeline != null && Model.UserTimeline.Any())
+            {
+                <ul>
+                    @foreach (var userTimelineDto in Model.UserTimeline)
+                    {
+                        <li>
+                            @userTimelineDto.timeline_name
+                            (<a asp-controller="TimelinePage" asp-action="Details" asp-route-id="@userTimelineDto.timeline_Id">Details</a>)
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No timelines available.</p>
+            }
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.User.UserId">Edit</a> |
+    <a asp-action="List">Back to List</a>
+ 
+</div>

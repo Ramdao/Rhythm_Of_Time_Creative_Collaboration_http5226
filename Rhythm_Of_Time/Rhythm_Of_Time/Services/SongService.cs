@@ -164,5 +164,22 @@ namespace Rhythm_Of_Time.Services
             response.Status = ServiceResponse.ServiceStatus.Deleted;
             return response;
         }
+
+        public async Task<IEnumerable<SongDTO>> GetSongsForEntry(int entryId)
+        {
+            return await _context.entry
+                .Where(e => e.entry_Id == entryId)
+                .Join(_context.song,
+                      e => e.SongId,
+                      s => s.SongId,
+                      (e, s) => new SongDTO
+                      {
+                          SongId = s.SongId,
+                          Title = s.Title,
+                          Album = s.Album,
+                          ReleaseYear = s.ReleaseYear
+                      })
+                .ToListAsync();
+        }
     }
 }

@@ -28,8 +28,10 @@ namespace Rhythm_Of_Time.Models
         public int ArtistSong_Id { get; set; }
         public int SongId { get; set; }
         public int ArtistId { get; set; }
+        public string ArtistName { get; set; }  
+        public string Role { get; set; }
 
-        public string role { get; set; }
+
     }
 }
 

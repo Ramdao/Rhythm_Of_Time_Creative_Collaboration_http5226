@@ -1,0 +1,43 @@
+﻿@model Rhythm_Of_Time.Models.ArtistDto
+
+@{
+    ViewData["Title"] = "Edit Artist";
+}
+
+<h1>Edit Artist</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update" asp-route-id="@Model.ArtistId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ArtistId" />
+
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="nationality" class="control-label"></label>
+                <input asp-for="nationality" class="form-control" />
+                <span asp-validation-for="nationality" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

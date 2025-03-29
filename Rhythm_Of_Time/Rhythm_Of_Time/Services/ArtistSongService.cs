@@ -109,7 +109,7 @@ namespace Rhythm_Of_Time.Services
                     ArtistSong_Id = asg.ArtistSong_Id,
                     SongId = asg.SongId,
                     ArtistId = asg.ArtistId,
-                    role = asg.role
+                    Role = asg.role
                 })
                 .ToListAsync();
 
@@ -127,7 +127,7 @@ namespace Rhythm_Of_Time.Services
                     ArtistSong_Id = asg.ArtistSong_Id,
                     SongId = asg.SongId,
                     ArtistId = asg.ArtistId,
-                    role = asg.role
+                    Role = asg.role
                 })
                 .ToListAsync();
 

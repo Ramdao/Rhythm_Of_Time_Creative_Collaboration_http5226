@@ -1,0 +1,41 @@
+﻿@model Rhythm_Of_Time.Models.AwardDetails
+
+@{
+    ViewData["Title"] = "Award Details";
+}
+
+<h2>@Model.Award.name</h2>
+<a asp-action="List">Back to Award List</a>
+<p><strong>Description:</strong> @Model.Award.description</p>
+
+<h3>Songs that won this award</h3>
+@if (Model.Songs.Any())
+{
+    <ul>
+        @foreach (var song in Model.Songs)
+        {
+            <li>@song.Title</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No songs found for this award.</p>
+}
+
+<h3>Artists associated with these songs</h3>
+@if (Model.Artists.Any())
+{
+    <ul>
+        @foreach (var artist in Model.Artists)
+        {
+            <li>@artist.name (@artist.nationality)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No artists found for these songs.</p>
+}
+
+<a href="@Url.Action("List", "SongPage")">Back to Songs List</a>

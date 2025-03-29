@@ -16,6 +16,6 @@ namespace Rhythm_Of_Time.Interfaces
         Task<ServiceResponse> DeleteTimeline(int id);
 
 
-       // Task<IEnumerable<TimelineDto>> GetTimelinesForEntry(int entryId);
+        Task<IEnumerable<TimelineDto>> GetTimelinesForEntry(int entryId);
     }
 }

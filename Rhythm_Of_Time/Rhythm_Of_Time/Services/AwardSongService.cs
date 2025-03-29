@@ -109,7 +109,7 @@ namespace Rhythm_Of_Time.Services
                     AwardSong_Id = asg.AwardSong_Id,
                     SongId = asg.SongId,
                     AwardId = asg.AwardId,
-                    status = asg.status
+                    Status = asg.status
                 })
                 .ToListAsync();
 
@@ -127,7 +127,7 @@ namespace Rhythm_Of_Time.Services
                     AwardSong_Id = asg.AwardSong_Id,
                     SongId = asg.SongId,
                     AwardId = asg.AwardId,
-                    status = asg.status
+                    Status = asg.status
                 })
                 .ToListAsync();
 

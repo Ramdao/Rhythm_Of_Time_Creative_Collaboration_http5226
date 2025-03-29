@@ -35,7 +35,8 @@ namespace Rhythm_Of_Time.Services
                     UserId = User.Id,
                     UserName = User.UserName,
                     UserEmail = User.Email,
-                    
+                  
+
                 });
             }
             
@@ -60,51 +61,38 @@ namespace Rhythm_Of_Time.Services
 
         public async Task<ServiceResponse> UpdateUser(string id, UserDto userDto)
         {
-            ServiceResponse serviceResponse = new();
+            var response = new ServiceResponse();
 
-            // Check for empty required fields
-            if (string.IsNullOrWhiteSpace(userDto.UserName) ||
-                string.IsNullOrWhiteSpace(userDto.UserEmail))
-            {
-                serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
-                serviceResponse.Messages.Add("Please provide a valid username and email.");
-                return serviceResponse;
-            }
+           
 
-            // Find the user in Identity
-            IdentityUser? user = await _userManager.FindByIdAsync(id);
+            // Get user
+            var user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
-                serviceResponse.Status = ServiceResponse.ServiceStatus.NotFound;
-                serviceResponse.Messages.Add("User not found.");
-                return serviceResponse;
+                response.Status = ServiceResponse.ServiceStatus.NotFound;
+                response.Messages.Add("User not found");
+                return response;
             }
 
-            // Update properties
+            // Update fields
             user.UserName = userDto.UserName;
-            user.Email = userDto.UserEmail;
+            user.NormalizedUserName = _userManager.NormalizeName(userDto.UserName);
+            user.Email = userDto.UserEmail;  // Critical for login
+            user.NormalizedEmail = _userManager.NormalizeEmail(userDto.UserEmail);
+            user.SecurityStamp = Guid.NewGuid().ToString(); // Force re-login
 
-            try
+            // Save
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
             {
-                var result = await _userManager.UpdateAsync(user);
-                if (!result.Succeeded)
-                {
-                    serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
-                    serviceResponse.Messages.Add("Failed to update user.");
-                    return serviceResponse;
-                }
-            }
-            catch (Exception)
-            {
-                serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
-                serviceResponse.Messages.Add("An unexpected error occurred while updating the user.");
-                return serviceResponse;
+                response.Status = ServiceResponse.ServiceStatus.Error;
+                response.Messages.AddRange(result.Errors.Select(e => e.Description));
+                return response;
             }
 
-            serviceResponse.Status = ServiceResponse.ServiceStatus.Updated;
-            return serviceResponse;
+            response.Status = ServiceResponse.ServiceStatus.Updated;
+            return response;
         }
-
         public async Task<ServiceResponse> DeleteUser(string id)
         {
             ServiceResponse response = new();

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Rhythm_Of_Time.Models.SongDTO>
+
+@{
+    ViewData["Title"] = "Song List";
+}
+
+<h1>Song List</h1>
+
+<p>
+    <a asp-action="New">Create New Song</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseYear)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SongId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.SongId">Details</a> |
+                    <a asp-action="ConfirmDelete" asp-route-id="@item.SongId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

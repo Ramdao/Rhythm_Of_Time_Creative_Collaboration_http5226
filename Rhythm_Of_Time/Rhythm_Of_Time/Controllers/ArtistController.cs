@@ -38,7 +38,7 @@ namespace Rhythm_Of_Time.Controllers
 
         // POST: api/artist
         [HttpPost(template: "add")]
-        public async Task<IActionResult> CreateArtist([FromBody] Artist artist)
+        public async Task<IActionResult> CreateArtist([FromBody] ArtistDto artist)
         {
             if (artist == null)
             {
@@ -56,7 +56,7 @@ namespace Rhythm_Of_Time.Controllers
 
         // PUT: api/artist/5
         [HttpPut("update{id}")]
-        public async Task<IActionResult> UpdateArtist(int id, [FromBody] Artist artist)
+        public async Task<IActionResult> UpdateArtist(int id, [FromBody] ArtistDto artist)
         {
             if (artist == null)
             {

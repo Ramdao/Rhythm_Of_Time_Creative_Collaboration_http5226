@@ -30,6 +30,8 @@ namespace Rhythm_Of_Time.Models
         public int SongId { get; set; }
 
         public string decription { get; set; }
+        public string? TimelineName { get; set; } 
+        public string? SongTitle { get; set; }
     }
    
 }

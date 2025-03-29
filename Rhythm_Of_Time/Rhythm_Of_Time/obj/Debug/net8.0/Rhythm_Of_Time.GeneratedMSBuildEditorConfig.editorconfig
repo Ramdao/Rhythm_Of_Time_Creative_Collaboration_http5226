@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Rhythm_Of_Time
 build_property.RootNamespace = Rhythm_Of_Time
@@ -20,8 +28,104 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AdminPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYWdlXENvbmZpcm1EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AdminPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AdminPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AdminPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYWdlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/ArtistPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0UGFnZVxDb25maXJtRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/ArtistPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0UGFnZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/ArtistPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0UGFnZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/ArtistPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0UGFnZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/ArtistPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0UGFnZVxOZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AwardPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRQYWdlXENvbmZpcm1EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AwardPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRQYWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AwardPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRQYWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AwardPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRQYWdlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/AwardPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRQYWdlXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/EntryPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cnlQYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/Home/Index.cshtml]
@@ -30,6 +134,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/LinkPage/TimelineSongLink.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1BhZ2VcVGltZWxpbmVTb25nTGluay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/LinkPage/UserTimeLineLink.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlua1BhZ2VcVXNlclRpbWVMaW5lTGluay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/Shared/Error.cshtml]
@@ -42,6 +154,46 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/SongPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1BhZ2VcQ29uZmlybURlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/SongPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1BhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/SongPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1BhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/SongPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1BhZ2VcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/SongPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1BhZ2VcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/TimelinePage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZWxpbmVQYWdlXENvbmZpcm1EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/TimelinePage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZWxpbmVQYWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/TimelinePage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZWxpbmVQYWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/TimelinePage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZWxpbmVQYWdlXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/TimelinePage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZWxpbmVQYWdlXE5ldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/radin/OneDrive/Desktop/uni/sem2/http5226/http5226/Rhythm_Of_Time_Creative_Collaboration_http5226/Rhythm_Of_Time/Rhythm_Of_Time/Views/_ViewImports.cshtml]

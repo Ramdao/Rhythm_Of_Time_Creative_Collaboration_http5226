@@ -28,8 +28,11 @@ namespace Rhythm_Of_Time.Models
         public int AwardSong_Id { get; set; }
         public int SongId { get; set; }
         public int AwardId { get; set; }
+        public string AwardName { get; set; }  
+        public int AwardYear { get; set; } 
+        public string Status { get; set; }
 
-        public string status { get; set; }
+
     }
 }
 

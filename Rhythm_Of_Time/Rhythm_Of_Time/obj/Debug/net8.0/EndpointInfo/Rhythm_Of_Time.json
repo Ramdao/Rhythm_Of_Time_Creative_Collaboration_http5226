@@ -49,17 +49,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             }
           }
@@ -91,17 +91,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Artist"
+                "$ref": "#/components/schemas/ArtistDto"
               }
             }
           }
@@ -629,6 +629,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Entry/find{id}": {
+      "get": {
+        "tags": [
+          "Entry"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1313,7 +1336,7 @@
   },
   "components": {
     "schemas": {
-      "Artist": {
+      "ArtistDto": {
         "type": "object",
         "properties": {
           "artistId": {
@@ -1345,6 +1368,10 @@
           "artistId": {
             "type": "integer",
             "format": "int32"
+          },
+          "artistName": {
+            "type": "string",
+            "nullable": true
           },
           "role": {
             "type": "string",
@@ -1386,6 +1413,14 @@
             "type": "integer",
             "format": "int32"
           },
+          "awardName": {
+            "type": "string",
+            "nullable": true
+          },
+          "awardYear": {
+            "type": "integer",
+            "format": "int32"
+          },
           "status": {
             "type": "string",
             "nullable": true
@@ -1409,6 +1444,14 @@
             "format": "int32"
           },
           "decription": {
+            "type": "string",
+            "nullable": true
+          },
+          "timelineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "songTitle": {
             "type": "string",
             "nullable": true
           }
@@ -1522,6 +1565,10 @@
             "nullable": true
           },
           "user_email": {
+            "type": "string",
+            "nullable": true
+          },
+          "user_name": {
             "type": "string",
             "nullable": true
           }

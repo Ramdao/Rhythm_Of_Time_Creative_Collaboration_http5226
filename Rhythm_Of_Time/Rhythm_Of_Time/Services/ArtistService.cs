@@ -3,6 +3,7 @@ using Rhythm_Of_Time.Models;
 using Rhythm_Of_Time.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Rhythm_Of_Time.Services
@@ -16,26 +17,44 @@ namespace Rhythm_Of_Time.Services
             _context = context;
         }
 
-        // List all artists
-        public async Task<IEnumerable<Artist>> List()
+        // List all artists with mapping to ArtistDto
+        public async Task<IEnumerable<ArtistDto>> List()
         {
             // Retrieve all artists from the database
-            return await _context.artist.ToListAsync();
+            var artists = await _context.artist.ToListAsync();
+
+            // Map each Artist entity to an ArtistDto
+            return artists.Select(a => new ArtistDto
+            {
+                ArtistId = a.ArtistId,
+                name = a.name,
+                nationality = a.nationality
+            }).ToList();
         }
 
-        // Find an artist by ID
-        public async Task<Artist?> FindArtist(int id)
+        // Find an artist by ID and return an ArtistDto
+        public async Task<ArtistDto?> FindArtist(int id)
         {
-            // Find the artist with the given ID
-            return await _context.artist.FirstOrDefaultAsync(a => a.ArtistId == id);
+            var artist = await _context.artist
+                                       .Where(a => a.ArtistId == id)
+                                       .FirstOrDefaultAsync();
+
+            if (artist == null) return null;
+
+            // Map to ArtistDto before returning
+            return new ArtistDto
+            {
+                ArtistId = artist.ArtistId,
+                name = artist.name,
+                nationality = artist.nationality
+            };
         }
 
         // Update an artist's information
-        public async Task<ServiceResponse> UpdateArtist(int id, Artist artist)
+        public async Task<ServiceResponse> UpdateArtist(int id, ArtistDto artistDto)
         {
             ServiceResponse serviceResponse = new();
 
-            // Find the existing artist in the database
             var existingArtist = await _context.artist.FindAsync(id);
             if (existingArtist == null)
             {
@@ -44,13 +63,12 @@ namespace Rhythm_Of_Time.Services
                 return serviceResponse;
             }
 
-            // Update the artist's details
-            existingArtist.name = artist.name;
-            existingArtist.nationality = artist.nationality;
+            // Update artist details using ArtistDto
+            existingArtist.name = artistDto.name;
+            existingArtist.nationality = artistDto.nationality;
 
             try
             {
-                // Save changes to the database
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -65,23 +83,27 @@ namespace Rhythm_Of_Time.Services
         }
 
         // Add a new artist
-        public async Task<ServiceResponse> AddArtist(Artist artist)
+        public async Task<ServiceResponse> AddArtist(ArtistDto artistDto)
         {
             ServiceResponse serviceResponse = new();
 
-            // Validate the data (ensure name and nationality are provided)
-            if (string.IsNullOrWhiteSpace(artist.name) || string.IsNullOrWhiteSpace(artist.nationality))
+            if (string.IsNullOrWhiteSpace(artistDto.name) || string.IsNullOrWhiteSpace(artistDto.nationality))
             {
                 serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
                 serviceResponse.Messages.Add("Artist name and nationality are required.");
                 return serviceResponse;
             }
 
-            // Add the new artist to the database
+            // Convert ArtistDto to Artist
+            var artist = new Artist
+            {
+                name = artistDto.name,
+                nationality = artistDto.nationality
+            };
+
             _context.artist.Add(artist);
             try
             {
-                // Save changes to the database
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

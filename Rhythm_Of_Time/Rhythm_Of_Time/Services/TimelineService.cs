@@ -32,6 +32,7 @@ namespace Rhythm_Of_Time.Services
                     timeline_name = timeline.timeline_name,
                     date = timeline.date,
                     description = timeline.description,
+                    
 
                 });
             }
@@ -187,6 +188,20 @@ namespace Rhythm_Of_Time.Services
         //    return timelineDtos;
         //}
 
+        public async Task<IEnumerable<TimelineDto>> GetTimelinesForEntry(int entryId)
+        {
+            return await _context.entry
+                .Where(e => e.entry_Id == entryId)
+                .Join(_context.timelines,
+                      e => e.timeline_Id,
+                      t => t.timeline_Id,
+                      (e, t) => new TimelineDto
+                      {
+                          timeline_Id = t.timeline_Id,
+                          description = t.description
+                      })
+                .ToListAsync();
+        }
     }
 }
 

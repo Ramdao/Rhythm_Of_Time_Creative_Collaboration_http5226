@@ -19,7 +19,7 @@ namespace Rhythm_Of_Time.Controllers
         [HttpPost("LinkAwardToSong")]
         public async Task<IActionResult> LinkAwardToSong([FromBody] AwardSongDto awardSongDto)
         {
-            var response = await _awardSongService.LinkAwardToSong(awardSongDto.SongId, awardSongDto.AwardId, awardSongDto.status);
+            var response = await _awardSongService.LinkAwardToSong(awardSongDto.SongId, awardSongDto.AwardId, awardSongDto.Status);
 
             if (response.Status == ServiceResponse.ServiceStatus.Created)
             {

@@ -1,0 +1,63 @@
+﻿@model UserTimeLineDetails
+
+@{
+    ViewData["Title"] = "User Timeline Management";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- List of Users -->
+<h3>Users</h3>
+<a asp-controller="AdminPage" asp-action="List">Back to Users</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.UserEmail
+                <td>@user.UserEmail</td>
+                <td>
+                    <!-- Dropdown to choose a timeline and buttons for actions -->
+                    <!-- Link Form -->
+                    <form method="post" action="@Url.Action("LinkUserToTimeline", "LinkPage")" style="display:inline;">
+                        <input type="hidden" name="userId" value="@user.UserId" />
+
+                        <!-- Dropdown to select timeline -->
+                        <select name="timelineId" class="form-control" required>
+                            <option value="">Select Timeline</option>
+                            @foreach (var timeline in Model.Timelines)
+                            {
+                                <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
+                            }
+                        </select>
+
+                        <button type="submit" class="btn btn-success" style="margin-top: 5px;">Link</button>
+                    </form>
+
+                    <!-- Unlink Form -->
+                    <form method="post" action="@Url.Action("UnlinkUserFromTimeline", "LinkPage")" style="display:inline;">
+                        <input type="hidden" name="userId" value="@user.UserId" />
+
+                        <!-- Dropdown to select timeline -->
+                        <select name="timelineId" class="form-control" required>
+                            <option value="">Select Timeline</option>
+                            @foreach (var timeline in Model.Timelines)
+                            {
+                                <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
+                            }
+                        </select>
+
+                        <button type="submit" class="btn btn-danger" style="margin-top: 5px;">Unlink</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

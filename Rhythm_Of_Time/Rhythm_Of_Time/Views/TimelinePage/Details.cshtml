@@ -1,0 +1,58 @@
+﻿@model Rhythm_Of_Time.Models.TimelineDetails
+
+@{
+    ViewData["Title"] = "Timeline Details";
+}
+
+<h1>Timeline Details</h1>
+<a asp-action="List">List of Timelines</a>
+<a asp-action="New">Add New Timeline</a>
+<div>
+    <h4>Timeline</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeline.timeline_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeline.timeline_name)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeline.date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeline.date)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Timeline.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Timeline.description)
+        </dd>
+    </dl>
+</div>
+
+<!-- Display associated entries here -->
+<div>
+    <h4>Associated Entries</h4>
+    <hr />
+    @if (Model.Entries != null && Model.Entries.Any())
+    {
+        <ul>
+            @foreach (var entry in Model.Entries)
+            {
+                <li>
+                    <strong>@entry.decription</strong><br />
+                    (<a asp-controller="EntryPage" asp-action="Details" asp-route-id="@entry.entry_Id">View Details</a>)
+                   
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No associated entries.</p>
+    }
+</div>

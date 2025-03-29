@@ -1,0 +1,60 @@
+﻿@model Rhythm_Of_Time.Models.EntryDetails
+
+@{
+    ViewData["Title"] = "Entry Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h3>Entry Description</h3>
+    <p>@Model.Entry.decription</p>  
+</div>
+
+<hr />
+
+<h3>Associated Timeline</h3>
+<div>
+    <h4>Timeline Name</h4>
+    <p>@Model.Timeline?.timeline_name</p>
+</div>
+
+<hr />
+
+<h3>Other Entries in this Timeline</h3>
+@if (Model.AssociatedEntries.Any())
+{
+    <ul>
+        @foreach (var entry in Model.AssociatedEntries)
+        {
+            <li>@entry.decription</li> 
+        }
+    </ul>
+}
+else
+{
+    <p>No other entries associated with this timeline.</p>
+}
+
+<hr />
+
+<h3>Associated Songs in this Timeline</h3>
+@if (Model.AssociatedSongs.Any())
+{
+    <ul>
+        @foreach (var song in Model.AssociatedSongs)
+        {
+            <li>
+                @song.Title<br />
+                (<a asp-controller="SongPage" asp-action="Details" asp-route-id="@song.SongId">View Details</a>)
+           
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No songs associated with this timeline.</p>
+}
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary">Back to Home</a>
