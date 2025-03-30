@@ -1,0 +1,67 @@
+﻿@model ArtistLinkDetails
+
+@{
+    ViewData["Title"] = "Song Artist Management";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- List of Songs -->
+<h3>Users</h3>
+<a asp-controller="AdminPage" asp-action="List">Back to Users</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var song in Model.Songs)
+        {
+            <tr>
+                <td>@song.Title</td>
+                <td>@song.Album</td>
+                <td>@song.ReleaseYear</td>
+                <td>
+                    <!-- Link Form -->
+                    <form method="post" action="@Url.Action("LinkArtistToSong", "LinkPage")" style="display:inline;">
+                        <input type="hidden" name="SongId" value="@song.SongId" />
+
+                        <!-- Dropdown to select timeline -->
+                        <select name="ArtistId" class="form-control" required>
+                            <option value="">Select Artist</option>
+                            @foreach (var timeline in Model.Artists)
+                            {
+                                <option value="@timeline.ArtistId">@timeline.name</option>
+                            }
+                        </select>
+
+                        <!-- Description Field -->
+                        <input type="text" name="role" class="form-control mt-2" placeholder="Enter role" required />
+
+                        <button type="submit" class="btn btn-success mt-2">Link</button>
+                    </form>
+
+                    <!-- Unlink Form -->
+                    <form method="post" action="@Url.Action("UnLinkArtistToSong", "LinkPage")" style="display:inline;">
+                        <input type="hidden" name="SongId" value="@song.SongId" />
+
+                        <!-- Dropdown to select timeline -->
+                        <select name="ArtistId" class="form-control" required>
+                            <option value="">Select Artist</option>
+                            @foreach (var timeline in Model.Artists)
+                            {
+                                <option value="@timeline.ArtistId">@timeline.name</option>
+                            }
+                        </select>
+
+                        <button type="submit" class="btn btn-danger mt-2">Unlink</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -64,6 +64,38 @@ namespace Rhythm_Of_Time.Controllers
 
             return View(viewModel);
         }
+
+        public async Task<IActionResult> ArtistSongLink(string Id)
+        {
+            var artists = await _artistService.List();
+            var songs = await _songService.List();
+
+            var viewModel = new ArtistLinkDetails
+            {
+                SongId = Id,
+                Artists = artists,
+                Songs = songs
+            };
+           
+
+            return View(viewModel);
+        }
+
+        public async Task<IActionResult> AwardSongLink(string Id)
+        {
+            var awards = await _awardService.List();
+            var songs = await _songService.List();
+
+            var viewModel = new AwardLinkDetails
+            {
+                SongId = Id,
+                Awards = awards,
+                Songs = songs
+            };
+
+
+            return View(viewModel);
+        }
         // POST: LinkPage/LinkUserToTimeline
         [HttpPost]
         public async Task<IActionResult> LinkUserToTimeline(string userId, int timelineId)
@@ -147,6 +179,98 @@ namespace Rhythm_Of_Time.Controllers
         {
             var entries = await _entryService.GetEntriesForSong(songId);
             return Json(entries);
+        }
+
+        // POST: Link a song to a artist with a description
+        [HttpPost]
+        public async Task<IActionResult> LinkArtistToSong(int songId, int artistId, string role)
+        {
+            var response = await _artistSongService.LinkArtistToSong(songId, artistId, role);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            {
+                TempData["Success"] = "Artist successfully linked to Song.";
+            }
+            else
+            {
+                TempData["Error"] = string.Join(", ", response.Messages);
+            }
+
+            return RedirectToAction("ArtistSongLink");
+        }
+
+        // POST: Unlink a song from an artist
+
+        [HttpPost]
+
+        public async Task<IActionResult> UnLinkArtistToSong(int songId, int artistId)
+        {
+            var response = await _artistSongService.UnlinkArtistFromSong(songId, artistId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            {
+                TempData["Success"] = "Artist successfully unlinked to Song.";
+            }
+            else
+            {
+                TempData["Error"] = string.Join(", ", response.Messages);
+            }
+
+            return RedirectToAction("ArtistSongLink");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetArtistForSong(int id)
+        {
+            var songs = await _artistSongService.GetArtistsForSong(id);
+            return Json(songs);
+        }
+
+
+
+        // POST: Link a song to a artist with a description
+        [HttpPost]
+        public async Task<IActionResult> LinkAwardToSong(int songId, int awardId, string descritption)
+        {
+            var response = await _awardSongService.LinkAwardToSong(songId, awardId, descritption);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            {
+                TempData["Success"] = "Award successfully linked to Song.";
+            }
+            else
+            {
+                TempData["Error"] = string.Join(", ", response.Messages);
+            }
+
+            return RedirectToAction("AwardSongLink");
+        }
+
+        // POST: Unlink a song from an artist
+
+        [HttpPost]
+
+        public async Task<IActionResult> UnLinkAwardToSong(int songId, int awardId)
+        {
+            var response = await _awardSongService.UnlinkAwardFromSong(songId, awardId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            {
+                TempData["Success"] = "Artist successfully unlinked to Song.";
+            }
+            else
+            {
+                TempData["Error"] = string.Join(", ", response.Messages);
+            }
+
+            return RedirectToAction("ArtistSongLink");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetwardForSong(int id)
+        {
+            var awards = await _awardSongService.GetAwardsForSong(id);
+            return Json(awards);
         }
     }
 }

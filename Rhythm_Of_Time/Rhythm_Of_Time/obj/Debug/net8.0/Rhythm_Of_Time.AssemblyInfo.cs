@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84b1957bb3089bd43bc174e3821b0af6dcd628ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42caada06fc1e4e0853210a30d50018592074de5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rhythm_Of_Time")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
