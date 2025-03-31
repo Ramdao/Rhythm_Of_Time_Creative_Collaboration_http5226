@@ -4,7 +4,9 @@
     {
 
         public required SongDTO Song { get; set; }
-        public IEnumerable<ArtistDto>? Artists { get; set; }
-        public IEnumerable<AwardDto>? Awards { get; set; }
+        public IEnumerable<ArtistSongDto>? Artists { get; set; }
+        public IEnumerable<AwardSongDto>? Awards { get; set; }
+
+
     }
 }

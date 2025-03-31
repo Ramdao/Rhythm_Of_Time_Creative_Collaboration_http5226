@@ -230,17 +230,17 @@ namespace Rhythm_Of_Time.Controllers
 
         // POST: Link a song to a artist with a description
         [HttpPost]
-        public async Task<IActionResult> LinkAwardToSong(int songId, int awardId, string descritption)
+        public async Task<IActionResult> LinkAwardToSong(int songId, int awardId, string status)
         {
-            var response = await _awardSongService.LinkAwardToSong(songId, awardId, descritption);
+            var response = await _awardSongService.LinkAwardToSong(songId, awardId, status);
 
             if (response.Status == ServiceResponse.ServiceStatus.Created)
             {
-                TempData["Success"] = "Award successfully linked to Song.";
+                TempData["SuccessMessage"] = "Award linked successfully!";
             }
             else
             {
-                TempData["Error"] = string.Join(", ", response.Messages);
+                TempData["ErrorMessage"] = string.Join(", ", response.Messages);
             }
 
             return RedirectToAction("AwardSongLink");
@@ -249,21 +249,20 @@ namespace Rhythm_Of_Time.Controllers
         // POST: Unlink a song from an artist
 
         [HttpPost]
-
         public async Task<IActionResult> UnLinkAwardToSong(int songId, int awardId)
         {
             var response = await _awardSongService.UnlinkAwardFromSong(songId, awardId);
 
-            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            if (response.Status == ServiceResponse.ServiceStatus.Deleted)
             {
-                TempData["Success"] = "Artist successfully unlinked to Song.";
+                TempData["SuccessMessage"] = "Award unlinked successfully!";
             }
             else
             {
-                TempData["Error"] = string.Join(", ", response.Messages);
+                TempData["ErrorMessage"] = string.Join(", ", response.Messages);
             }
 
-            return RedirectToAction("ArtistSongLink");
+            return RedirectToAction("LinkAwardPage");
         }
 
         [HttpGet]

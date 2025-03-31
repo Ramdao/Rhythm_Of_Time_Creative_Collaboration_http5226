@@ -1,14 +1,15 @@
 ﻿@model AwardLinkDetails
 
 @{
-    ViewData["Title"] = "Song Artist Management";
+    ViewData["Title"] = "Song Award Management";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <!-- List of Songs -->
-<h3>Users</h3>
+<h3>Songs</h3>
 <a asp-controller="AdminPage" asp-action="List">Back to Users</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -30,17 +31,24 @@
                     <form method="post" action="@Url.Action("LinkAwardToSong", "LinkPage")" style="display:inline;">
                         <input type="hidden" name="SongId" value="@song.SongId" />
 
-                        <!-- Dropdown to select timeline -->
-                        <select name="ArtistId" class="form-control" required>
-                            <option value="">Select Artist</option>
-                            @foreach (var timeline in Model.Awards)
+                        <!-- Dropdown to select Award -->
+                        <select name="AwardId" class="form-control" required>
+                            <option value="">Select Award</option>
+                            @if (Model.Awards.Any())
                             {
-                                <option value="@timeline.AwardId">@timeline.name</option>
+                                @foreach (var award in Model.Awards)
+                                {
+                                    <option value="@award.AwardId">@award.name</option>
+                                }
+                            }
+                            else
+                            {
+                                <option value="" disabled>No awards found</option>
                             }
                         </select>
 
-                        <!-- Description Field -->
-                        <input type="text" name="Description" class="form-control mt-2" placeholder="Enter Description" required />
+                        <!-- Status Field -->
+                        <input type="text" name="Status" class="form-control mt-2" placeholder="Enter Status" required />
 
                         <button type="submit" class="btn btn-success mt-2">Link</button>
                     </form>
@@ -49,12 +57,19 @@
                     <form method="post" action="@Url.Action("UnLinkAwardToSong", "LinkPage")" style="display:inline;">
                         <input type="hidden" name="SongId" value="@song.SongId" />
 
-                        <!-- Dropdown to select timeline -->
-                        <select name="ArtistId" class="form-control" required>
+                        <!-- Dropdown to select Award -->
+                        <select name="AwardId" class="form-control" required>
                             <option value="">Select Award</option>
-                            @foreach (var timeline in Model.Awards)
+                            @if (Model.Awards.Any())
                             {
-                                <option value="@timeline.AwardId">@timeline.name</option>
+                                @foreach (var award in Model.Awards)
+                                {
+                                    <option value="@award.AwardId">@award.name</option>
+                                }
+                            }
+                            else
+                            {
+                                <option value="" disabled>No awards found</option>
                             }
                         </select>
 

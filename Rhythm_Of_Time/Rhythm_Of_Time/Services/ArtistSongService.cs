@@ -99,16 +99,17 @@ namespace Rhythm_Of_Time.Services
         }
 
         // Get all Artists for a Song
-        public async Task<IEnumerable<ArtistSongDto>> GetArtistsForSong(int songId)
+        public async Task<IEnumerable<ArtistSongDto>> GetSongsForArtist(int artistId)
         {
             var artistSongs = await _context.artistSongs
-                .Where(asg => asg.SongId == songId)
-                .Include(asg => asg.Artist)
+                .Where(asg => asg.ArtistId == artistId)
+                .Include(asg => asg.Song) // Ensures we fetch song details
                 .Select(asg => new ArtistSongDto
                 {
                     ArtistSong_Id = asg.ArtistSong_Id,
                     SongId = asg.SongId,
                     ArtistId = asg.ArtistId,
+                    Title = asg.Song.Title, 
                     Role = asg.role
                 })
                 .ToListAsync();
@@ -117,16 +118,17 @@ namespace Rhythm_Of_Time.Services
         }
 
         // Get all Songs for an Artist
-        public async Task<IEnumerable<ArtistSongDto>> GetSongsForArtist(int artistId)
+        public async Task<IEnumerable<ArtistSongDto>> GetArtistsForSong(int songId)
         {
             var artistSongs = await _context.artistSongs
-                .Where(asg => asg.ArtistId == artistId)
-                .Include(asg => asg.Song)
+                .Where(asg => asg.SongId == songId)
+                .Include(asg => asg.Artist) // Ensures we fetch artist details
                 .Select(asg => new ArtistSongDto
                 {
                     ArtistSong_Id = asg.ArtistSong_Id,
                     SongId = asg.SongId,
                     ArtistId = asg.ArtistId,
+                    ArtistName = asg.Artist.name, // Include artist details
                     Role = asg.role
                 })
                 .ToListAsync();

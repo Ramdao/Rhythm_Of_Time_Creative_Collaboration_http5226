@@ -18,7 +18,7 @@ namespace Rhythm_Of_Time.Controllers
         private readonly IArtistSongService _artistSongService;
         private readonly IAwardSongService _awardSongService;
 
-       public EntryPageController(IUserServices userService, ITimelineService timelineService, IEntryService entryService, IArtistService artistService, ISongService songService, IAwardService awardService, IUserTimelineService userTimelineService, IArtistSongService artistSongService, IAwardSongService awardSongService)
+        public EntryPageController(IUserServices userService, ITimelineService timelineService, IEntryService entryService, IArtistService artistService, ISongService songService, IAwardService awardService, IUserTimelineService userTimelineService, IArtistSongService artistSongService, IAwardSongService awardSongService)
         {
             _userService = userService;
             _timelineService = timelineService;
@@ -48,7 +48,7 @@ namespace Rhythm_Of_Time.Controllers
             IEnumerable<EntryDto> associatedEntries = await _entryService.GetEntriesForTimeline(entryDto.timeline_Id);
 
             // Fetch the songs associated with this timeline
-            IEnumerable<SongDTO> associatedSongs = await _songService.GetSongsForEntry(entryDto.timeline_Id);
+            SongDTO? associatedSongs = await _songService.FindSong(entryDto.SongId);
 
             // Check if the timeline exists
             if (timelineDto == null)
@@ -62,16 +62,10 @@ namespace Rhythm_Of_Time.Controllers
                 Entry = entryDto,
                 Timeline = timelineDto,
                 AssociatedEntries = associatedEntries,
-                AssociatedSongs = associatedSongs  // Add associated songs here
+                Song = associatedSongs 
             };
 
-            return View(entryDetails);  // Pass EntryDetails to the view
+            return View(entryDetails);
         }
-
-
-
-
-
-
     }
 }

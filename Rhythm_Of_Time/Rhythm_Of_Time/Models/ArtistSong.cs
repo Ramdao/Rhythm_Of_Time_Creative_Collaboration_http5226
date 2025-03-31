@@ -31,6 +31,8 @@ namespace Rhythm_Of_Time.Models
         public string ArtistName { get; set; }  
         public string Role { get; set; }
 
+        public string Title { get; set; }
+
 
     }
 }

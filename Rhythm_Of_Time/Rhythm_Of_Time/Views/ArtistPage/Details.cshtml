@@ -23,19 +23,6 @@ else
     <p>No songs found for this artist.</p>
 }
 
-<h3>Awards</h3>
-@if (Model.Awards.Any())
-{
-    <ul>
-        @foreach (var award in Model.Awards)
-        {
-            <li>@award.name - @award.description</li>
-        }
-    </ul>
-}
-else
-{
-    <p>No awards found for this artist.</p>
-}
+
 
 <a href="@Url.Action("List", "SongPage")">Back to Song List</a>

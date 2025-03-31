@@ -31,7 +31,7 @@
             @foreach (var artist in Model.Artists)
             {
                 <li>
-                    <strong>@artist.name</strong> - @artist.nationality
+                    <strong>@artist.ArtistName</strong> 
                     (<a asp-controller="ArtistPage" asp-action="Details" asp-route-id="@artist.ArtistId">View Details</a>)
                 </li>
             }
@@ -53,7 +53,7 @@
             @foreach (var award in Model.Awards)
             {
                 <li>
-                    <strong>@award.name</strong> - @award.description
+                    <strong>@award.Status</strong>
                     (<a asp-controller="AwardPage" asp-action="Details" asp-route-id="@award.AwardId">View Details</a>)
                 </li>
             }

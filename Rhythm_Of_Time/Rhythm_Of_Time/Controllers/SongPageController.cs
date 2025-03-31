@@ -33,58 +33,20 @@ namespace Rhythm_Of_Time.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            // Fetch the song by ID
-            SongDTO? songDto = await _songService.FindSong(id);
-            if (songDto == null)
-            {
-                return View("Error", new ErrorViewModel { Errors = ["Could not find song"] });
-            }
+            var songDto = await _songService.FindSong(id);
+            var associatedArtists = await _artistSongService.GetArtistsForSong(id);
+            var associatedAwards = await _awardSongService.GetAwardsForSong(id);
 
-            // Fetch the artist(s) associated with this song
-            IEnumerable<ArtistSongDto> artistSongDtos = await _artistSongService.GetSongsForArtist(id);
-            List<ArtistDto> associatedArtists = new List<ArtistDto>();
+            
 
-            foreach (var artistSong in artistSongDtos)
-            {
-                var artist = await _artistService.FindArtist(artistSong.ArtistId);
-                if (artist != null)
-                {
-                    associatedArtists.Add(new ArtistDto
-                    {
-                        ArtistId = artist.ArtistId,
-                        name = artist.name,
-                        nationality = artist.nationality
-                    });
-                }
-            }
+            if (songDto == null) return View("Error", new ErrorViewModel { Errors = ["Could not find song"] });
 
-            // Fetch the awards associated with this song
-            IEnumerable<AwardSongDto> awardSongDtos = await _awardSongService.GetSongsForAward(id);
-            List<AwardDto> associatedAwards = new List<AwardDto>();
-
-            foreach (var awardSong in awardSongDtos)
-            {
-                var award = await _awardService.FindAward(awardSong.AwardId);
-                if (award != null)
-                {
-                    associatedAwards.Add(new AwardDto
-                    {
-                        AwardId = award.AwardId,
-                        name = award.name,
-                        description = award.description
-                    });
-                }
-            }
-
-            // Prepare the SongDetails view model
-            SongDetails songDetails = new SongDetails()
+            return View(new SongDetails
             {
                 Song = songDto,
                 Artists = associatedArtists,
                 Awards = associatedAwards
-            };
-
-            return View(songDetails);
+            });
         }
 
 

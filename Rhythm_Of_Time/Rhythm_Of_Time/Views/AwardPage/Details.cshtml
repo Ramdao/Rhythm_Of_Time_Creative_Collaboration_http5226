@@ -23,19 +23,6 @@ else
     <p>No songs found for this award.</p>
 }
 
-<h3>Artists associated with these songs</h3>
-@if (Model.Artists.Any())
-{
-    <ul>
-        @foreach (var artist in Model.Artists)
-        {
-            <li>@artist.name (@artist.nationality)</li>
-        }
-    </ul>
-}
-else
-{
-    <p>No artists found for these songs.</p>
-}
+
 
 <a href="@Url.Action("List", "SongPage")">Back to Songs List</a>
