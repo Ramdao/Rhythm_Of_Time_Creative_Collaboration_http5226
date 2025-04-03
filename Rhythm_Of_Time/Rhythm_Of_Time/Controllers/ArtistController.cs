@@ -16,7 +16,16 @@ namespace Rhythm_Of_Time.Controllers
             _artistService = artistService;
         }
 
-        // GET: api/artist
+        /// <summary>
+        /// Retrieves a list of all artists.
+        /// </summary>
+        /// <returns>
+        /// 200 OK
+        /// [{ArtistDto}, {ArtistDto}, ...]
+        /// </returns>
+        /// <example>
+        /// POST: api/artist/List
+        /// </example>
         [HttpPost(template: "List")]
         public async Task<IActionResult> GetArtists()
         {
@@ -24,7 +33,18 @@ namespace Rhythm_Of_Time.Controllers
             return Ok(artists);
         }
 
-        // GET: api/artist/5
+        /// <summary>
+        /// Retrieves a specific artist by their ID.
+        /// </summary>
+        /// <param name="id">The ID of the artist to retrieve.</param>
+        /// <returns>
+        /// 200 OK
+        /// {ArtistDto}
+        /// 404 Not Found - If the artist does not exist.
+        /// </returns>
+        /// <example>
+        /// GET: api/artist/find5
+        /// </example>
         [HttpGet("find{id}")]
         public async Task<IActionResult> GetArtist(int id)
         {
@@ -36,7 +56,23 @@ namespace Rhythm_Of_Time.Controllers
             return Ok(artist);
         }
 
-        // POST: api/artist
+        /// <summary>
+        /// Creates a new artist.
+        /// </summary>
+        /// <param name="artist">The artist data transfer object.</param>
+        /// <returns>
+        /// 201 Created - If the artist is successfully created.
+        /// 400 Bad Request - If the provided data is invalid.
+        /// </returns>
+        /// <example>
+        /// POST: api/artist/add
+        /// Body:
+        /// {
+        ///   "name": "Artist Name",
+        ///   "genre": "Genre",
+        ///   ...
+        /// }
+        /// </example>
         [HttpPost(template: "add")]
         public async Task<IActionResult> CreateArtist([FromBody] ArtistDto artist)
         {
@@ -54,7 +90,25 @@ namespace Rhythm_Of_Time.Controllers
             return BadRequest(new { message = string.Join(", ", response.Messages) });
         }
 
-        // PUT: api/artist/5
+        /// <summary>
+        /// Updates an existing artist.
+        /// </summary>
+        /// <param name="id">The ID of the artist to update.</param>
+        /// <param name="artist">The updated artist data.</param>
+        /// <returns>
+        /// 204 No Content - If the update is successful.
+        /// 404 Not Found - If the artist does not exist.
+        /// 400 Bad Request - If the provided data is invalid.
+        /// </returns>
+        /// <example>
+        /// PUT: api/artist/update5
+        /// Body:
+        /// {
+        ///   "name": "Updated Artist Name",
+        ///   "genre": "Updated Genre",
+        ///   ...
+        /// }
+        /// </example>
         [HttpPut("update{id}")]
         public async Task<IActionResult> UpdateArtist(int id, [FromBody] ArtistDto artist)
         {
@@ -77,7 +131,18 @@ namespace Rhythm_Of_Time.Controllers
             return NoContent(); // Indicate that the update was successful
         }
 
-        // DELETE: api/artist/5
+        /// <summary>
+        /// Deletes an artist by ID.
+        /// </summary>
+        /// <param name="id">The ID of the artist to delete.</param>
+        /// <returns>
+        /// 204 No Content - If the artist is successfully deleted.
+        /// 404 Not Found - If the artist does not exist.
+        /// 400 Bad Request - If an error occurs during deletion.
+        /// </returns>
+        /// <example>
+        /// DELETE: api/artist/delete5
+        /// </example>
         [HttpDelete("delete{id}")]
         public async Task<IActionResult> DeleteArtist(int id)
         {

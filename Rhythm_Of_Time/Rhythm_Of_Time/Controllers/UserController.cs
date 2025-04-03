@@ -23,12 +23,34 @@ namespace Rhythm_Of_Time.Controllers
 
             _userService = context;
         }
+        /// <summary>
+        /// Retrieves a list of all users.
+        /// </summary>
+        /// <returns>
+        /// 200 - OK: A list of all users.
+        /// </returns>
+        /// <example>
+        /// GET: api/User/List
+        /// </example>
         [HttpGet(template: "List")]
         [Authorize(Roles = "admin")]
         public async Task<ActionResult<IEnumerable<UserDto>>> ListUsers()
         {
             return Ok(await _userService.List());
         }
+        /// <summary>
+        /// Updates an existing user's details.
+        /// </summary>
+        /// <param name="id">The ID of the user to update.</param>
+        /// <param name="userDto">Updated user data.</param>
+        /// <returns>
+        /// 204 - No Content: If the user was successfully updated.<br/>
+        /// 404 - Not Found: If the user does not exist.<br/>
+        /// 500 - Internal Server Error: If an unexpected error occurs.
+        /// </returns>
+        /// <example>
+        /// PUT: api/User/Update/123
+        /// </example>
 
         [HttpPut(template: "Update/{id}")]
         [Authorize(Roles = "admin")]
@@ -47,7 +69,18 @@ namespace Rhythm_Of_Time.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Deletes a user by ID.
+        /// </summary>
+        /// <param name="id">The ID of the user to delete.</param>
+        /// <returns>
+        /// 204 - No Content: If the user was successfully deleted.<br/>
+        /// 404 - Not Found: If the user does not exist.<br/>
+        /// 500 - Internal Server Error: If an unexpected error occurs.
+        /// </returns>
+        /// <example>
+        /// DELETE: api/User/Delete/123
+        /// </example>
         [HttpDelete(template: "Delete/{id}")]
         [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateUser(string id, [FromBody] UserDto updatedUser)
@@ -66,7 +99,19 @@ namespace Rhythm_Of_Time.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Adds a new user to the system.
+        /// </summary>
+        /// <param name="userDto">User data to be added.</param>
+        /// <param name="password">Password for the new user.</param>
+        /// <returns>
+        /// 201 - Created: If the user was successfully added.<br/>
+        /// 404 - Not Found: If the user cannot be added due to missing data.<br/>
+        /// 500 - Internal Server Error: If an unexpected error occurs.
+        /// </returns>
+        /// <example>
+        /// POST: api/User/Add
+        /// </example>
         [HttpPost(template: "Add")]
         [Authorize(Roles = "admin")]
         public async Task<IActionResult> AddUser([FromBody] UserDto userDto, string password)
@@ -84,7 +129,17 @@ namespace Rhythm_Of_Time.Controllers
 
             return Created($"api/User/FindUser/{response.CreatedId}", userDto);
         }
-
+        /// <summary>
+        /// Retrieves a specific user by ID.
+        /// </summary>
+        /// <param name="id">The ID of the user to find.</param>
+        /// <returns>
+        /// 200 - OK: The user data if found.<br/>
+        /// 404 - Not Found: If the user does not exist.
+        /// </returns>
+        /// <example>
+        /// GET: api/User/Find/123
+        /// </example>
         [HttpGet(template: "Find/{id}")]
         [Authorize(Roles = "admin")]
 

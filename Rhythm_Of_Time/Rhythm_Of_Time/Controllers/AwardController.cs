@@ -16,7 +16,17 @@ namespace Rhythm_Of_Time.Controllers
             _awardService = awardService;
         }
 
-        // GET: api/award
+        /// <summary>
+        /// Retrieves a list of all awards.
+        /// </summary>
+        /// <returns>
+        /// 200 OK
+        /// [{AwardDto}, {AwardDto}, ...]
+        /// </returns>
+        /// <example>
+        /// POST: api/award/List
+        /// </example>
+        
         [HttpPost(template: "List")]
         public async Task<IActionResult> GetAwards()
         {

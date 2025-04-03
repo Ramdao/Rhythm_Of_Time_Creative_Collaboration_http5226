@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\songcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\songcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\entrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\entrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\awardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\awardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\linkpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\linkpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\views\\songpage\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\views\\songpage\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\views\\songpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\views\\songpage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\controllers\\linkpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|solutionrelative:rhythm_of_time\\controllers\\linkpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE3EDE5F-BDB7-44FE-A916-A1EAFAF4592F}|Rhythm_Of_Time\\Rhythm_Of_Time.csproj|c:\\users\\radin\\onedrive\\desktop\\uni\\sem2\\http5226\\http5226\\rhythm_of_time_creative_collaboration_http5226\\rhythm_of_time\\rhythm_of_time\\views\\linkpage\\awardsonglink.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -55,6 +75,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Rhythm_Of_Time\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAuwI0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:21:34.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SongController.cs",
+              "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\SongController.cs",
+              "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\SongController.cs",
+              "ToolTip": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\SongController.cs",
+              "RelativeToolTip": "Rhythm_Of_Time\\Controllers\\SongController.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAqwJIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:20:23.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EntryController.cs",
+              "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\EntryController.cs",
+              "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\EntryController.cs",
+              "ToolTip": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\EntryController.cs",
+              "RelativeToolTip": "Rhythm_Of_Time\\Controllers\\EntryController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAuwJEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:19:05.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AwardController.cs",
+              "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\AwardController.cs",
+              "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\AwardController.cs",
+              "ToolTip": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\AwardController.cs",
+              "RelativeToolTip": "Rhythm_Of_Time\\Controllers\\AwardController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA8wBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:18:14.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArtistController.cs",
+              "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\ArtistController.cs",
+              "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\ArtistController.cs",
+              "ToolTip": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\ArtistController.cs",
+              "RelativeToolTip": "Rhythm_Of_Time\\Controllers\\ArtistController.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAswJAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T00:17:11.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Views\\SongPage\\List.cshtml",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Views\\SongPage\\List.cshtml",
@@ -67,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LinkPageController.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\LinkPageController.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\LinkPageController.cs",
@@ -80,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AwardSongLink.cshtml",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Views\\LinkPage\\AwardSongLink.cshtml",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Views\\LinkPage\\AwardSongLink.cshtml",
@@ -92,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "AwardSongService.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Services\\AwardSongService.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Services\\AwardSongService.cs",
@@ -104,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ArtistSong.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Models\\ArtistSong.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Models\\ArtistSong.cs",
@@ -116,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ArtistSongService.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Services\\ArtistSongService.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Services\\ArtistSongService.cs",
@@ -128,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "SongPageController.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Controllers\\SongPageController.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Controllers\\SongPageController.cs",
@@ -140,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "SongDetails.cs",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Models\\SongDetails.cs",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Models\\SongDetails.cs",
@@ -152,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Views\\SongPage\\Details.cshtml",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Views\\SongPage\\Details.cshtml",
@@ -160,12 +245,11 @@
               "RelativeToolTip": "Rhythm_Of_Time\\Views\\SongPage\\Details.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-30T04:59:12.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T04:59:12.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\radin\\OneDrive\\Desktop\\uni\\sem2\\http5226\\http5226\\Rhythm_Of_Time_Creative_Collaboration_http5226\\Rhythm_Of_Time\\Rhythm_Of_Time\\Views\\SongPage\\Edit.cshtml",
               "RelativeDocumentMoniker": "Rhythm_Of_Time\\Views\\SongPage\\Edit.cshtml",

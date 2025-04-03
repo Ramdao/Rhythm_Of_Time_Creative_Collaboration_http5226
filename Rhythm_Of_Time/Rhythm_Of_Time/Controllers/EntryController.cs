@@ -14,7 +14,23 @@ public class EntryController : ControllerBase
         _entryService = entryService;
     }
 
-    // Link a Song to a Timeline
+    /// <summary>
+    /// Links a song to a timeline by creating an entry.
+    /// </summary>
+    /// <param name="entryDto">The entry data containing timeline ID, song ID, and description.</param>
+    /// <returns>
+    /// 201 Created - If the entry is successfully created.
+    /// 400 Bad Request - If an error occurs during creation.
+    /// </returns>
+    /// <example>
+    /// POST: api/entry/LinkSongToTimeline
+    /// Body:
+    /// {
+    ///   "timeline_Id": 1,
+    ///   "SongId": 10,
+    ///   "description": "Song added to timeline."
+    /// }
+    /// </example>
     [HttpPost("LinkSongToTimeline")]
     public async Task<IActionResult> LinkEntryToTimelineAndSong([FromBody] EntryDto entryDto)
     {
@@ -28,7 +44,18 @@ public class EntryController : ControllerBase
         return BadRequest(response);
     }
 
-    // Unlink a Song from a Timeline
+    /// <summary>
+    /// Unlinks a song from a timeline by deleting the entry.
+    /// </summary>
+    /// <param name="timelineId">The ID of the timeline.</param>
+    /// <param name="songId">The ID of the song.</param>
+    /// <returns>
+    /// 204 No Content - If the entry is successfully deleted.
+    /// 400 Bad Request - If an error occurs.
+    /// </returns>
+    /// <example>
+    /// DELETE: api/entry/UnlinkSongFromTimeline/1/10
+    /// </example>
     [HttpDelete("UnlinkSongFromTimeline/{timelineId}/{songId}")]
     public async Task<IActionResult> UnlinkEntry(int timelineId, int songId)
     {
@@ -40,7 +67,17 @@ public class EntryController : ControllerBase
         return BadRequest(response);
     }
 
-    // Get all Entries for a specific Timeline
+    /// <summary>
+    /// Retrieves all entries for a specific timeline.
+    /// </summary>
+    /// <param name="timelineId">The ID of the timeline.</param>
+    /// <returns>
+    /// 200 OK
+    /// [{EntryDto}, {EntryDto}, ...]
+    /// </returns>
+    /// <example>
+    /// GET: api/entry/GetEntriesForTimeline/1
+    /// </example>
     [HttpGet("GetEntriesForTimeline/{timelineId}")]
     public async Task<IActionResult> GetEntriesForTimeline(int timelineId)
     {
@@ -48,7 +85,17 @@ public class EntryController : ControllerBase
         return Ok(entries);
     }
 
-    // Get all Entries for a specific Song
+    /// <summary>
+    /// Retrieves all entries for a specific song.
+    /// </summary>
+    /// <param name="songId">The ID of the song.</param>
+    /// <returns>
+    /// 200 OK
+    /// [{EntryDto}, {EntryDto}, ...]
+    /// </returns>
+    /// <example>
+    /// GET: api/entry/GetEntriesForSong/10
+    /// </example>
     [HttpGet("GetEntriesForSong/{songId}")]
     public async Task<IActionResult> GetEntriesForSong(int songId)
     {
@@ -56,7 +103,24 @@ public class EntryController : ControllerBase
         return Ok(entries);
     }
 
-    // Update an existing Entry
+    /// <summary>
+    /// Updates an existing entry.
+    /// </summary>
+    /// <param name="entryId">The ID of the entry to update.</param>
+    /// <param name="updatedEntryDto">The updated entry data.</param>
+    /// <returns>
+    /// 204 No Content - If the update is successful.
+    /// 400 Bad Request - If an error occurs during the update.
+    /// </returns>
+    /// <example>
+    /// PUT: api/entry/UpdateEntry/5
+    /// Body:
+    /// {
+    ///   "timeline_Id": 1,
+    ///   "SongId": 10,
+    ///   "description": "Updated description."
+    /// }
+    /// </example>
     [HttpPut("UpdateEntry/{entryId}")]
     public async Task<IActionResult> UpdateEntry(int entryId, [FromBody] EntryDto updatedEntryDto)
     {
@@ -68,7 +132,18 @@ public class EntryController : ControllerBase
         return BadRequest(response);
     }
 
-    // GET: api/award/5
+    /// <summary>
+    /// Retrieves a specific entry by its ID.
+    /// </summary>
+    /// <param name="id">The ID of the entry to retrieve.</param>
+    /// <returns>
+    /// 200 OK
+    /// {EntryDto}
+    /// 404 Not Found - If the entry does not exist.
+    /// </returns>
+    /// <example>
+    /// GET: api/entry/find5
+    /// </example>
     [HttpGet("find{id}")]
     public async Task<IActionResult> GetEntry(int id)
     {
