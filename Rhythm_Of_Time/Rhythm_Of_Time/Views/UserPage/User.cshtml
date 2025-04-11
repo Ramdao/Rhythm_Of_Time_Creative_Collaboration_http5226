@@ -1,0 +1,203 @@
+﻿@model Rhythm_Of_Time.Models.UserDetails
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="container">
+    <h1>User Details</h1>
+
+    <div class="user-info">
+        <h4>User Information</h4>
+        <hr />
+        <dl class="user-details">
+            <dt>Username:</dt>
+            <dd>@Model.User.UserName</dd>
+
+            <dt>Email:</dt>
+            <dd>@Model.User.UserEmail</dd>
+
+            <dt>Timelines:</dt>
+            <dd>
+                @if (Model.UserTimeline != null && Model.UserTimeline.Any())
+                {
+                    <ul class="timeline-list">
+                        @foreach (var userTimelineDto in Model.UserTimeline)
+                        {
+                            <li>
+                                @userTimelineDto.timeline_name
+                                (<a asp-controller="TimelinePage" asp-action="Details" asp-route-id="@userTimelineDto.timeline_Id">Details</a>)
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>No timelines available.</p>
+                }
+            </dd>
+        </dl>
+    </div>
+
+    <div class="navigation-links">
+        <a asp-controller="SongPage" asp-action="List"  id="edit-btn" class="btn">List of Songs</a> |
+        <a asp-controller="LinkPage" asp-action="TimeLineSongLink" a id="edit-btn" class="btn">Link Timeline</a> |
+        <a asp-controller="TimelinePage" asp-action="New" a id="edit-btn" class="btn">Add New Timline</a>
+         @if (User.IsInRole("admin"))
+                {
+        <a asp-controller="AdminPage" asp-action="List" a id="edit-btn" class="btn">For Admin</a>
+                }
+    </div>
+</div>
+
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h4 {
+        
+        text-align: center;
+    }
+
+    /* Link Styling */
+    a {
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+    /* Container and Layout */
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    /* Heading and Text */
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color:black;
+    }
+
+    .user-info {
+        margin-bottom: 30px;
+    }
+
+    /* User Information Styling */
+    .user-details {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 15px 20px;
+        margin: 20px 0;
+        font-size: 1.1rem;
+    }
+
+    dt {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    dd {
+        margin: 0;
+        font-size: 1rem;
+        color: #7f8c8d;
+    }
+
+    hr {
+        border: 0;
+        border-top: 2px solid #ecf0f1;
+        margin: 30px 0;
+    }
+
+    /* Timelines Section */
+    .timeline-list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+        .timeline-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #34495e;
+        }
+
+            .timeline-list li a {
+                font-weight: normal;
+                transition: color 0.3s ease;
+            }
+
+                .timeline-list li a:hover {
+                    color: #2980b9;
+                }
+
+    /* Button Styles */
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        font-size: 1rem;
+    }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+    /* Specific Styles for Buttons */
+    #edit-btn {
+        background-color: #2ecc71; /* Green */
+    }
+
+        #edit-btn:hover {
+            background-color: #27ae60; /* Dark Green */
+        }
+
+    #back-btn {
+        background-color: #e74c3c; /* Red */
+    }
+
+        #back-btn:hover {
+            background-color: #c0392b; /* Dark Red */
+        }
+
+    /* Navigation Links */
+    .navigation-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    footer {
+        border-top: 1px solid #ecf0f1; /* Add a subtle top border */
+        padding: 15px 0; /* Adjust padding to ensure it’s not too large */
+        background-color: #f8f9fa; /* Light background for the footer */
+        position: relative; /* Ensure the footer doesn't overlap other content */
+        text-align: center;
+        margin-top: 20px; /* Add some margin to prevent overlap with the content */
+    }
+
+    body {
+        padding-bottom: 100px; /* Adjust this depending on the footer height to ensure there's space at the bottom */
+    }
+</style>

@@ -1575,6 +1575,10 @@
           "user_name": {
             "type": "string",
             "nullable": true
+          },
+          "timelineId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

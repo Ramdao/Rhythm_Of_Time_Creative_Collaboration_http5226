@@ -33,5 +33,7 @@ namespace Rhythm_Of_Time.Models
         public string user_email { get; set; }
 
         public string user_name { get; set; }
+
+        public int TimelineId { get; set; }
     }
 }

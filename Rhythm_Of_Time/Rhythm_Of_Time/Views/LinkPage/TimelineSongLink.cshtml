@@ -1,67 +1,189 @@
 ﻿@model EntryLinkDetail
 
+
 @{
-    ViewData["Title"] = "User Timeline Management";
+    ViewData["Title"] = "Timeline Song Link Management";
 }
+
+<style>
+    body {
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .timeline-management-container {
+        margin-top: 30px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+
+    .timeline-form {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        color: black;
+        border: 1px solid #ddd;
+    }
+
+    .form-group label {
+        color: #555;
+        font-weight: bold;
+    }
+
+    .form-group select {
+        background-color: #fff;
+        color: #333;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+
+    .searchable-dropdown {
+        background-color: #fff !important;
+        color: #333 !important;
+    }
+
+    .btn {
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 10px 15px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(to right, #66b3ff, #3385ff);
+        color: white;
+        border: none;
+    }
+
+        .btn:hover {
+            background: linear-gradient(to right, #3385ff, #66b3ff);
+            transform: scale(1.05);
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+    h1, h3 {
+        color: #333;
+    }
+
+    /* Additional styling for the search dropdown */
+    .select2-container {
+        width: 100% !important;
+    }
+</style>
 
 <h1>@ViewData["Title"]</h1>
 
-<!-- List of Songs -->
-<h3>Users</h3>
-<a asp-controller="AdminPage" asp-action="List">Back to Users</a>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Album</th>
-            <th>Year</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var song in Model.Songs)
-        {
-            <tr>
-                <td>@song.Title</td>
-                <td>@song.Album</td>
-                <td>@song.ReleaseYear</td>
-                <td>
-                    <!-- Link Form -->
-                    <form method="post" action="@Url.Action("LinkSongToTimeline", "LinkPage")" style="display:inline;">
-                        <input type="hidden" name="SongId" value="@song.SongId" />
+<!-- List of Songs and Timelines -->
+<h3>Link Song to Timeline</h3>
+<a class="btn btn-secondary" asp-controller="AdminPage" asp-action="List">Back to Admin</a>
 
-                        <!-- Dropdown to select timeline -->
-                        <select name="timelineId" class="form-control" required>
-                            <option value="">Select Timeline</option>
-                            @foreach (var timeline in Model.Timelines)
-                            {
-                                <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
-                            }
-                        </select>
+<div class="timeline-management-container">
+    <!-- Link Song to Timeline Form -->
+    <form method="post" action="@Url.Action("LinkSongToTimeline", "TimelineSongLinkPage")" class="timeline-form">
+        <div class="form-group">
+            <label for="songId">Search & Select a Song</label>
+            <select name="songId" class="form-control searchable-dropdown" required>
+                <option value="">-- Select a Song --</option>
+                @foreach (var song in Model.Songs)
+                {
+                    <option value="@song.SongId">@song.Title</option>
+                }
+            </select>
+        </div>
 
-                        <!-- Description Field -->
-                        <input type="text" name="description" class="form-control mt-2" placeholder="Enter description" required />
+        <div class="form-group">
+            <label for="timelineId">Search & Select a Timeline</label>
+            <select name="timelineId" class="form-control searchable-dropdown" required>
+                <option value="">-- Select a Timeline --</option>
+                @foreach (var timeline in Model.Timelines)
+                {
+                    <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
+                }
+            </select>
+        </div>
 
-                        <button type="submit" class="btn btn-success mt-2">Link</button>
-                    </form>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" class="form-control" placeholder="Enter a description" required />
+        </div>
 
-                    <!-- Unlink Form -->
-                    <form method="post" action="@Url.Action("UnlinkSongFromTimeline", "LinkPage")" style="display:inline;">
-                        <input type="hidden" name="SongId" value="@song.SongId" />
+        <button type="submit" class="btn btn-success" style="margin-top: 5px;">Link Song to Timeline</button>
+    </form>
 
-                        <!-- Dropdown to select timeline -->
-                        <select name="timelineId" class="form-control" required>
-                            <option value="">Select Timeline</option>
-                            @foreach (var timeline in Model.Timelines)
-                            {
-                                <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
-                            }
-                        </select>
+    <!-- Unlink Song from Timeline Form -->
+    <form method="post" action="@Url.Action("UnlinkSongFromTimeline", "TimelineSongLinkPage")" class="timeline-form">
+        <div class="form-group">
+            <label for="songId">Search & Select a Song</label>
+            <select name="songId" class="form-control searchable-dropdown" required>
+                <option value="">-- Select a Song --</option>
+                @foreach (var song in Model.Songs)
+                {
+                    <option value="@song.SongId">@song.Title</option>
+                }
+            </select>
+        </div>
 
-                        <button type="submit" class="btn btn-danger mt-2">Unlink</button>
-                    </form>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <div class="form-group">
+            <label for="timelineId">Search & Select a Timeline</label>
+            <select name="timelineId" class="form-control searchable-dropdown" required>
+                <option value="">-- Select a Timeline --</option>
+                @foreach (var timeline in Model.Timelines)
+                {
+                    <option value="@timeline.timeline_Id">@timeline.timeline_name</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-danger" style="margin-top: 5px;">Unlink Song from Timeline</button>
+    </form>
+</div>
+
+@section Scripts {
+    <!-- Include jQuery & Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Select2 for Song and Timeline dropdowns
+            $('.searchable-dropdown').select2({
+                placeholder: "Search and select an option...",
+                allowClear: true
+            });
+        });
+    </script>
+}

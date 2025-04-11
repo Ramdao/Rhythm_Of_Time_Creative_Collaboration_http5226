@@ -5,7 +5,13 @@
 }
 
 <h1>Song Details</h1>
-<a asp-action="List">Back to List</a>
+
+@if (User.IsInRole("admin"))
+{
+    <a asp-action="List">Back to List</a>
+    <a asp-controller="AdminPage" asp-action="List">Users</a>
+}
+
 <div>
     <h4>Song Information</h4>
     <hr />
@@ -31,8 +37,11 @@
             @foreach (var artist in Model.Artists)
             {
                 <li>
-                    <strong>@artist.ArtistName</strong> 
-                    (<a asp-controller="ArtistPage" asp-action="Details" asp-route-id="@artist.ArtistId">View Details</a>)
+                    <strong>@artist.ArtistName</strong>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a asp-controller = "ArtistPage" asp-action = "Details" asp-route-id = "@artist.ArtistId" > View Details </a >
+            }
                 </li>
             }
         </ul>
@@ -54,7 +63,10 @@
             {
                 <li>
                     <strong>@award.Status</strong>
-                    (<a asp-controller="AwardPage" asp-action="Details" asp-route-id="@award.AwardId">View Details</a>)
+                    @if (User.IsInRole("admin"))
+                    {
+                        <a asp-controller="AwardPage" asp-action="Details" asp-route-id="@award.AwardId"> View Details </a>
+            }
                 </li>
             }
         </ul>

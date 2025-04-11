@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Rhythm_Of_Time.Interfaces;
 using Rhythm_Of_Time.Models;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Rhythm_Of_Time.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class AdminPageController : Controller
     {
         private readonly IUserServices _userService;
