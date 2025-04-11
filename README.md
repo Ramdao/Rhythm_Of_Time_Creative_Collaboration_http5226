@@ -7,6 +7,7 @@
 > All CRUD functionalities for Users, Timeline, Song, Artist, Award  
 > All Link functionalities for Entry, Usertimeline, ArtistSong, AwardSong  
 > Helped with making views
+> Included JavaScript Validation
 
 #### Features Added:
 
