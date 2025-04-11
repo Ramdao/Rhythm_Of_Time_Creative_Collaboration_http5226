@@ -15,7 +15,7 @@
 > Only accounts with "Admin" role are allowed to do CRUD functionality on: Users, Song, Artist and Awards.  
 > Admins can link between Awards, Songs, and Artists.  
 > All other users can do CRUD on Timeline and are able to link between Timeline and Song.
-> > Included JavaScript Validation  
+> Included JavaScript Validation  
 > Helped with CSS
 
 ### Chung Man Kwan Karen (Audrey)
