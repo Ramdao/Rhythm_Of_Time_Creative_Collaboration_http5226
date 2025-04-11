@@ -7,14 +7,15 @@
 > All CRUD functionalities for Users, Timeline, Song, Artist, Award  
 > All Link functionalities for Entry, Usertimeline, ArtistSong, AwardSong  
 > Helped with making views
-> Included JavaScript Validation
+
 
 #### Features Added:
 
 > Login feature using ASP.NET Users.  
 > Only accounts with "Admin" role are allowed to do CRUD functionality on: Users, Song, Artist and Awards.  
 > Admins can link between Awards, Songs, and Artists.  
-> All other users can do CRUD on Timeline and are able to link between Timeline and Song.  
+> All other users can do CRUD on Timeline and are able to link between Timeline and Song.
+> > Included JavaScript Validation  
 > Helped with CSS
 
 ### Chung Man Kwan Karen (Audrey)
