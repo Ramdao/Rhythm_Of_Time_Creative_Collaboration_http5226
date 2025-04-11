@@ -2,7 +2,7 @@
 ## Contributions
 ### Tashrif Radin Ali
 >All Crud Functionalities for Users, Timeline, Song, Artist, Award
->All Link functionalities for Entry, Usertimeline, ArtistSong, AwardSong
+>All Link functionalities for Entry, Usertimeline, ArtistSong, AwardSong, Helped with making views
 
 ### Chung Man Kwan Karen (Audrey)
 >Views for Listing, New, Edit, Delete and Details for Users, Timeline, Song, Artist, Award, Entry
