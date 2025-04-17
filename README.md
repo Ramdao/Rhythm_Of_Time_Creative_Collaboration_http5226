@@ -25,5 +25,6 @@
 
 #### Features Added:
 
-> Search functionality in TimelineSongLink Page to find songs easier.  
+> Search functionality in TimelineSongLink Page to find songs easier.
+  
 
