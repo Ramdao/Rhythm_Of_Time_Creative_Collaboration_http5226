@@ -16,7 +16,7 @@
 > Admins can link between Awards, Songs, and Artists.  
 > All other users can do CRUD on Timeline and are able to link between Timeline and Song.
 > Included JavaScript Validation  
-> Helped with CSS
+> Customized with CSS
 
 ### Chung Man Kwan Karen (Audrey)
 
@@ -26,4 +26,4 @@
 #### Features Added:
 
 > Search functionality in TimelineSongLink Page to find songs easier.  
-> Helped with CSS
+
